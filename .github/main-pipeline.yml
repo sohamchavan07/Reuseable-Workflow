@@ -1,0 +1,10 @@
+name: Main Pipeline
+
+on:
+  push:
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/build.yml
+    with:
+      node-version: '18'
