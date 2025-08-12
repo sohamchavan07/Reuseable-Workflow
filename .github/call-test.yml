@@ -1,0 +1,15 @@
+name: Call Test Workflow from Repo A
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read   # <-- Here, top-level under `on`
+
+jobs:
+  call-reusable:
+    uses: git@github.com:sohamchavan07/REPO-A.git/Repo-A/.github/workflows/test.yml@3990ba820da9417e1110649f93debdd4cfa16da6
+    with:
+      name: "Soham"
